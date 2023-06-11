@@ -1,6 +1,7 @@
 plugins {
     `java-gradle-plugin`
     `maven-publish`
+    `groovy`
 }
 
 group = "pl.malirz"
@@ -20,6 +21,7 @@ dependencies {
     implementation(gradleApi())
 
     testImplementation("org.spockframework:spock-core:2.3-groovy-3.0")
+    testImplementation(gradleTestKit())
 }
 
 tasks.withType<Test> {
