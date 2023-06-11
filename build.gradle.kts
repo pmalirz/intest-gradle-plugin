@@ -19,7 +19,6 @@ repositories {
 dependencies {
     implementation(gradleApi())
 
-    // groovy 4 and spock 2
     testImplementation("org.spockframework:spock-core:2.3-groovy-3.0")
 }
 
@@ -30,7 +29,7 @@ tasks.withType<Test> {
 gradlePlugin {
     plugins {
         create("intestPlugin") {
-            id = "pl.malirz.intest"
+            id = "pl.vavelite.intest"
             displayName = "Integration Test Plugin"
             description = "Adds integration test task to project"
             @Suppress("UnstableApiUsage")
