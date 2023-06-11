@@ -21,11 +21,6 @@ dependencies {
 
     // groovy 4 and spock 2
     testImplementation("org.spockframework:spock-core:2.3-groovy-3.0")
-
-    // junit
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:5.7.0")
 }
 
 tasks.withType<Test> {
@@ -38,7 +33,7 @@ gradlePlugin {
             id = "pl.malirz.intest"
             displayName = "Integration Test Plugin"
             description = "Adds integration test task to project"
-            tags.set(listOf("source", "integration-tests", "tests"))
+            tags.set(listOf("source", "integration-test", "test"))
             implementationClass = "pl.malirz.intest.InTestPlugin"
         }
     }
