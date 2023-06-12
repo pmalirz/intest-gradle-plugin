@@ -11,6 +11,27 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
 
+/**
+ * Plugin that adds integration tests phase to a project. <br>
+ * The <b>intest</b> task is added to the project as well. <br>
+ * Although the <b>intest</b> task should run after the <b>test</b> task it does not run automatically by default.
+ * To run the <b>intest</b> task use the following command: <code>gradlew intest</code>.
+ * <br>
+ * Standard configuration of the plugin is as follows:
+ * <pre>
+ * plugins {
+ *     id 'java-library'
+ *     id 'pl.malirz.intest'
+ * }
+ *
+ * intest {
+ *     useJUnitPlatform()
+ *     testLogging {
+ *         showStandardStreams = true
+ *     }
+ * }
+ * </pre>
+ */
 public class InTestPlugin implements Plugin<Project> {
 
     public static final String SRC_INTEST_JAVA = "src/intest/java";

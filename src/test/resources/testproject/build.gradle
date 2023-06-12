@@ -1,0 +1,39 @@
+plugins {
+    id 'java-library'
+    id 'pl.malirz.intest'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        showStandardStreams = true
+    }
+}
+
+intest {
+    useJUnitPlatform()
+    testLogging {
+        showStandardStreams = true
+    }
+}
+
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.2")
+
+    intestImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
+    intestRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.2")
+}

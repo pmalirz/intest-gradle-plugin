@@ -1,6 +1,7 @@
 plugins {
     `java-gradle-plugin`
     `maven-publish`
+    `groovy`
 }
 
 group = "pl.malirz"
@@ -20,6 +21,12 @@ dependencies {
     implementation(gradleApi())
 
     testImplementation("org.spockframework:spock-core:2.3-groovy-3.0")
+    testImplementation(gradleTestKit())
+    testImplementation("commons-io:commons-io:2.11.0")
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.9.2")
 }
 
 tasks.withType<Test> {
@@ -29,8 +36,8 @@ tasks.withType<Test> {
 gradlePlugin {
     plugins {
         create("intestPlugin") {
-            id = "pl.vavelite.intest"
-            displayName = "Integration Test Plugin"
+            id = "pl.malirz.intest"
+            displayName = "Integration Tests"
             description = "Adds integration test task to project"
             @Suppress("UnstableApiUsage")
             tags.set(listOf("source", "integration-test", "test"))
