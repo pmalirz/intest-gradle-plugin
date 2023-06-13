@@ -49,7 +49,7 @@ gradlePlugin {
 // publish to maven repository
 publishing {
     publications {
-        create<MavenPublication>("mavenJava") {
+        create<MavenPublication>("gpr") {
             from(components["java"])
         }
     }
@@ -58,8 +58,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/pmalirz/intest-gradle-plugin")
             credentials {
-                username = project.findProperty("gpr.user") as String?
-                password = project.findProperty("gpr.key") as String?
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
             }
         }
     }
