@@ -30,9 +30,7 @@ pluginManagement {
         id("pl.malirz.intest") version "{version}"
     }
     repositories {
-        gradlePluginPortal(
-            mavenCentral()
-                    mavenLocal ()
+        gradlePluginPortal()
     }
 }
 ```
@@ -47,12 +45,10 @@ plugins {
 
 tasks.withType<Test> {
     useJUnitPlatform()
-    testLogging.setShowStandardStreams(true)
 }
 
-tasks.getByName<Test>("intest") {
+tasks.withType<InTest> {
     useJUnitPlatform()
-    testLogging.setShowStandardStreams(true)
 }
 ```
 
