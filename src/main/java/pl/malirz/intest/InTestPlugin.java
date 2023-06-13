@@ -26,9 +26,6 @@ import java.util.Set;
  *
  * intest {
  *     useJUnitPlatform()
- *     testLogging {
- *         showStandardStreams = true
- *     }
  * }
  * </pre>
  */
@@ -89,7 +86,7 @@ public class InTestPlugin implements Plugin<Project> {
     private static void configureIntestTask(final Project project) {
         final SourceSet intestSrc = getOrCreateSourceSet(project);
 
-        project.getTasks().register(INTEST_NAME, Test.class, task -> {
+        project.getTasks().register(INTEST_NAME, InTest.class, task -> {
             task.setGroup("verification");
             task.setDescription("Runs integration tests.");
             task.setTestClassesDirs(intestSrc.getOutput().getClassesDirs());
