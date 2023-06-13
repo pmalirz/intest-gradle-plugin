@@ -27,7 +27,7 @@ heavier to run. Therefore, it is wise to make a conscious decision on when to ex
 ```kotlin
 pluginManagement {
     plugins {
-        id("pl.malirz.intest") version "{version}"
+        id("pl.malirz.intest") version "1.0.0"
     }
     repositories {
         gradlePluginPortal()
