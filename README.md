@@ -1,5 +1,7 @@
 # intest-gradle-plugin
 
+<img height="350" src="./docs/images/intest-logo.png" title="VShop Logo" width="350"/>
+
 ## Overview
 
 **intest-gradle-plugin** is a Gradle plugin that simplifies the configuration of integration tests. The plugin adds
@@ -27,7 +29,7 @@ heavier to run. Therefore, it is wise to make a conscious decision on when to ex
 ```kotlin
 pluginManagement {
     plugins {
-        id("pl.malirz.intest") version "1.0.0"
+        id("pl.malirz.intest") version "1.0.1"
     }
     repositories {
         gradlePluginPortal()
