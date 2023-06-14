@@ -1,1 +1,1 @@
-rootProject.name = "intest"
+rootProject.name = "intest-gradle-plugin"

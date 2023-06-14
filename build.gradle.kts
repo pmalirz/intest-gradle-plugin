@@ -1,11 +1,8 @@
 plugins {
     `java-gradle-plugin`
     `maven-publish`
-    `groovy`
+    groovy
 }
-
-group = "pl.malirz"
-version = "0.0.1-SNAPSHOT"
 
 java {
     toolchain {
@@ -34,13 +31,15 @@ tasks.withType<Test> {
 }
 
 gradlePlugin {
+    website.set("https://github.com/pmalirz/intest-gradle-plugin")
+    vcsUrl.set("https://github.com/pmalirz/intest-gradle-plugin.git")
     plugins {
         create("intestPlugin") {
             id = "pl.malirz.intest"
             displayName = "Integration Tests"
             description = "Adds integration test task to project"
             @Suppress("UnstableApiUsage")
-            tags.set(listOf("source", "integration-test", "test"))
+            tags.set(listOf("testing", "integrationTesting"))
             implementationClass = "pl.malirz.intest.InTestPlugin"
         }
     }
