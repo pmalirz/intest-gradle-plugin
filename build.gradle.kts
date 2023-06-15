@@ -37,8 +37,8 @@ gradlePlugin {
     plugins {
         create("intestPlugin") {
             id = "pl.malirz.intest"
-            displayName = "Integration Tests"
-            description = "Adds integration test task to project"
+            displayName = "InTest Gradle Plugin"
+            description = "Enables integration test in a project"
             @Suppress("UnstableApiUsage")
             tags.set(listOf("testing", "integrationTesting"))
             implementationClass = "pl.malirz.intest.InTestPlugin"
