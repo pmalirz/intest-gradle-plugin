@@ -60,7 +60,7 @@ tasks.withType<InTest> {
 }
 ```
 
-Folders structure in your project
+### Folders structure in your project
 
 ```
 project
@@ -71,6 +71,8 @@ project
     └───test/
     └───intest/
 ```
+
+<img src="./docs/images/intest-folder-structure.png" title="intest folder structure" />
 
 ---
 
