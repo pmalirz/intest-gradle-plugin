@@ -1,4 +1,7 @@
 # intest-gradle-plugin
+[![Build](https://github.com/pmalirz/intest-gradle-plugin/actions/workflows/build.yaml/badge.svg)](https://github.com/pmalirz/intest-gradle-plugin/actions/workflows/build.yaml)
+[![Gradle Plugin Portal](https://img.shields.io/badge/Version-1.0.1-green.svg)](https://plugins.gradle.org/plugin/pl.malirz.intest)
+
 
 <img height="350" src="./docs/images/intest-logo.png" title="VShop Logo" width="350"/>
 
